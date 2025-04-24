@@ -139,22 +139,22 @@ We analyzed FAERS data by merging adverse outcomes with reported drug and prefer
 ### Figures
 
 
-![Figure 1: Top 20 Most Reported Drugs](/Users/chloeschnydman/Desktop/Data400/figure1.png)  
+![Figure 1: Top 20 Most Reported Drugs](Graphs/figure1.png)  
 Figure 1: Top 20 Most Reported Drugs
 
-![Figure 2: Top 15 Most Reported Reactions](/Users/chloeschnydman/Desktop/Data400/figure2.png)  
+![Figure 2: Top 15 Most Reported Reactions](Graphs/figure2.png)  
 Figure 2: Top 15 Most Reported Reactions  
 
 
-![Figure 3: Top Drugs Associated with Death Outcomes](/Users/chloeschnydman/Desktop/Data400/figure3.png)   
+![Figure 3: Top Drugs Associated with Death Outcomes](Graphs/figure3.png)   
 Figure 3: Top Drugs Associated with Death Outcomes
 
 
-![Figure 4: Top Adverse Events by Top 10 Drugs](/Users/chloeschnydman/Desktop/Data400/figure4.png)  
+![Figure 4: Top Adverse Events by Top 10 Drugs](Graphs/figure4.png)  
 Figure 4: Top Adverse Events by Top 10 Drugs
 
 
-![Figure 5: Decision Tree Predicting Serious Outcomes](/Users/chloeschnydman/Desktop/Data400/figure5.5.png)  
+![Figure 5: Decision Tree Predicting Serious Outcomes](Graphs/figure5.png)  
 Figure 5: Decision Tree Predicting Serious Outcomes
 
 ## Drug Names and Descriptions
