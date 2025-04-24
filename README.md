@@ -154,7 +154,7 @@ Figure 3: Top Drugs Associated with Death Outcomes
 Figure 4: Top Adverse Events by Top 10 Drugs
 
 
-![Figure 5: Decision Tree Predicting Serious Outcomes](Graphs/figure5.png)  
+![Figure 5: Decision Tree Predicting Serious Outcomes](Graphs/figure5.5.png)  
 Figure 5: Decision Tree Predicting Serious Outcomes
 
 ## Drug Names and Descriptions
