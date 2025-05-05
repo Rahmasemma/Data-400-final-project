@@ -207,7 +207,7 @@ Using a decision tree classifier (Figure 6), we demonstrated that a few adverse 
 The Logistic Regression Model and its Coefficients (Figure 7 & 8) show how much each drug affects the odds of death, with  positive coefficinets representing an increase in the odds of death and negative coeficients representing an decrease in the odds of death. **Eliquis**, **Nuplazid** and **Dapagliflozin** were most strongly associated with death while **Inflectra**, **Vedolizumab** and **Dupixent** where found more often in non-death cases. 
 
 \
-**DISCLAIMER**: These are associations, not causation. It's possible that Deaths are more commonly reported with certain drugs due to the conditions they treat (e.g., cancer vs. allergy) and some drugs appear “safer” because they’re used in healthier populations ()
+**DISCLAIMER**: These are associations, not causation. It's possible that Deaths are more commonly reported with certain drugs due to the conditions they treat (e.g., cancer vs. allergy) and some drugs appear “safer” because they’re used in healthier populations
 
 
 ## Literature Cited
