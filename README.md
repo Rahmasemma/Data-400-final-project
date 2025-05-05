@@ -139,7 +139,7 @@ We analyzed FAERS data by merging adverse outcomes with reported drug and prefer
 ### Figures
 
 
-![Figure 1: Top 20 Most Reported Drugs](/Graphs/figure1.png)  
+![Figure 1: Top 20 Most Reported Drugs](Graphs/figure1.png)  
 Figure 1: Top 20 Most Reported Drugs
 
 ![Figure 2: Top 15 Most Reported Reactions](Graphs/figure2.png)  
