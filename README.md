@@ -131,7 +131,7 @@ The FDA’s FAERS database collects voluntary reports of adverse drug reactions 
 
 ## Materials and Methods
 
-We analyzed FAERS data by merging adverse outcomes with reported drug and preferred term (PT) codes. Using `Python` (`pandas`, `seaborn`, `sci-kit-learn`), we visualized the top 10 drugs and adverse events via a heatmap and trained a logistic regression model to evaluate predictors of serious outcomes. We also built a decision tree classifier (max depth = 3) to illustrate how specific PTs and drugs contribute to the classification of serious versus non-serious reports. All data were preprocessed with one-hot encoding, and models were evaluated on interpretability and visual clarity for presentation.
+We analyzed FAERS data by merging adverse outcomes with reported drug and preferred term (PT) codes. To reduce confounding and ensure clearer attribution of adverse events, we focused on patients who were reported to have taken only one drug at a time. Using `Python` (`pandas`, `seaborn`, `sci-kit-learn`), we visualized the top 10 drugs and adverse events via a heatmap and trained a logistic regression model to evaluate predictors of serious outcomes. We also built a decision tree classifier (max depth = 3) to illustrate how specific PTs and drugs contribute to the classification of serious versus non-serious reports. All data were preprocessed with one-hot encoding, and models were evaluated on interpretability and visual clarity for presentation.
 
 
 ## Results
@@ -139,7 +139,7 @@ We analyzed FAERS data by merging adverse outcomes with reported drug and prefer
 ### Figures
 
 
-![Figure 1: Top 20 Most Reported Drugs](Graphs/figure1.png)  
+![Figure 1: Top 20 Most Reported Drugs](/Graphs/figure1.png)  
 Figure 1: Top 20 Most Reported Drugs
 
 ![Figure 2: Top 15 Most Reported Reactions](Graphs/figure2.png)  
@@ -153,9 +153,20 @@ Figure 3: Top Drugs Associated with Death Outcomes
 ![Figure 4: Top Adverse Events by Top 10 Drugs](Graphs/figure4.png)  
 Figure 4: Top Adverse Events by Top 10 Drugs
 
+![Figure 5: Logged Dosages by Death Outcome per Top 20 Drugs](Graphs/figure5.png)  
+Figure 5: Dosages by Death Outcome per Top 20 Drugs
 
-![Figure 5: Decision Tree Predicting Serious Outcomes](Graphs/figure5.5.png)  
-Figure 5: Decision Tree Predicting Serious Outcomes
+![Figure 6: Decision Tree Predicting Serious Outcomes](Graphs/figure6.png)  
+Figure 6: Decision Tree Predicting Serious Outcomes
+
+<p align="left">
+  <img alt="Light" src="Graphs//figure8.png" width="53%">
+&nbsp; &nbsp; 
+  <img alt="Dark" src="Graphs/figure7.png" width="44%">
+  Figures 7 & 8: Drug Effects on Death Odds Logistic Regression and its Coefficients
+</p> 
+
+
 
 ## Drug Names and Descriptions
 
@@ -166,7 +177,7 @@ Figure 5: Decision Tree Predicting Serious Outcomes
 - **Dapagliflozin:** Treatment for type 2 diabetes, heart failure, and chronic kidney disease  
 - **Dupixent:** Treatment for atopic dermatitis, asthma and other inflammatory conditions
 - **Eliquis:** Blood thinner used to treat and prevent blood clots
-- **Humira:** Treatment used for arious autoimmune conditions, like Crohn’s disease, ulcerative colitis, rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, and psoriasis  
+- **Humira:** Treatment used for various autoimmune conditions, like Crohn’s disease, ulcerative colitis, rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, and psoriasis  
 - **Human Immunoglobulin G:** Treatment for immunodeficiency and various autoimmune disorders  
 - **Inflectra:** Treatment for various autoimmune conditions, like Crohn’s disease, ulcerative colitis, rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, and psoriasis
 - **Keytruda:** Immunotherapy cancer treatment  
@@ -189,7 +200,14 @@ Figure 5: Decision Tree Predicting Serious Outcomes
 
 In our bar plots (Figures 1, 2, and 3), we observed that a handful of drugs, such as **Eliquis** and **Humira**, were responsible for a disproportionate number of adverse event reports, suggesting their widespread use and potential safety concerns. Among reported reactions, “Death,” “Off label use,” and “Drug ineffective” stood out not only in frequency but also in severity, emphasizing the importance of monitoring treatment effectiveness and proper usage. 
 By comparing drugs with death-specific reports, we identified medications like **Nuplazid** and **Dapagliflozin** that may warrant closer post-market evaluation. Our heatmap analysis (Figure 4) further revealed consistent overlaps between top drugs and severe adverse events like “Hospitalization” and “Neutropenia,” suggesting shared high-risk patterns across multiple therapies. 
-Finally, using a decision tree classifier (Figure 5), we demonstrated that a few adverse event terms could meaningfully separate serious from non-serious cases, offering a transparent tool for early signal detection. 
+The box plot (Figure 5) does well on identifying non-death cases (Class 0), but it struggles with precision on death cases (Class 1), which means that when the model is predicts death, it's often wrong. However, death is a strong (0.70), which means it captures 70% of real deaths. This trade-off is expected in imbalanced data.
+
+Using a decision tree classifier (Figure 6), we demonstrated that a few adverse event terms could meaningfully separate serious from non-serious cases, offering a transparent tool for early signal detection.
+
+The Logistic Regression Model and its Coefficients (Figure 7 & 8) show how much each drug affects the odds of death, with  positive coefficinets representing an increase in the odds of death and negative coeficients representing an decrease in the odds of death. **Eliquis**, **Nuplazid** and **Dapagliflozin** were most strongly associated with death while **Inflectra**, **Vedolizumab** and **Dupixent** where found more often in non-death cases. 
+
+\
+**DISCLAIMER**: These are associations, not causation. It's possible that Deaths are more commonly reported with certain drugs due to the conditions they treat (e.g., cancer vs. allergy) and some drugs appear “safer” because they’re used in healthier populations ()
 
 
 ## Literature Cited
