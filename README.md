@@ -15,6 +15,11 @@
 
 The FDA’s FAERS (FDA Adverse Event Reporting System) database collects voluntary reports of adverse drug reactions from healthcare providers, patients, and manufacturers. It serves as a critical resource for detecting new safety concerns, understanding drug risks, and making regulatory decisions. Data files include information on demographics, drugs involved, reported reactions, outcomes, and drug usage patterns.
 
+## Disclaimer!!
+These are **associations**, not causation. It's possible: \
+Deaths are more commonly reported with certain drugs due to the conditions they treat (e.g., cancer vs. allergy). \
+Some drugs appear “safer” because they're used in healthier populations.
+
 
 ## Dataset
 
@@ -162,7 +167,8 @@ Figure 6: Decision Tree Predicting Serious Outcomes
 <p align="left">
   <img alt="Light" src="Graphs//figure8.png" width="53%">
 &nbsp; &nbsp; 
-  <img alt="Dark" src="Graphs/figure7.png" width="44%">
+  <img alt="Dark" src="Graphs/figure7.1.png" width="22%">
+
   Figures 7 & 8: Drug Effects on Death Odds Logistic Regression and its Coefficients
 </p> 
 
