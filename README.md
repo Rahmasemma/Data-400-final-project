@@ -167,7 +167,7 @@ Figure 6: Decision Tree Predicting Serious Outcomes
 <p align="left">
   <img alt="Light" src="Graphs//figure8.png" width="53%">
 &nbsp; &nbsp; 
-  <img alt="Dark" src="Graphs/figure7.1.png" width="24%">
+  <img alt="Dark" src="Graphs/figure7.1 .png" width="24%">
 
   Figures 7 & 8: Drug Effects on Death Odds Logistic Regression and its Coefficients
 </p> 
